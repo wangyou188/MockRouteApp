@@ -126,7 +126,7 @@ public class MockRouteActivity extends AppCompatActivity {
             int mockLocationSetting = Settings.Secure.getInt(
                     getContentResolver(), Settings.Secure.ALLOW_MOCK_LOCATION, 0);
             return mockLocationSetting != 0;
-        } catch (Settings.SettingNotFoundException e) {
+        } catch (Exception e) {
             return false;
         }
     }
